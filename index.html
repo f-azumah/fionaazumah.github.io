@@ -161,14 +161,28 @@
           </div>
         </div>
 
-        <!-- Placeholder -->
-        <div class="project-card relative bg-white dark:bg-gray-900 border border-dashed border-stone-300 dark:border-gray-700 p-8 opacity-50"
-             data-tags="all">
-          <span class="text-xs font-medium uppercase tracking-widest text-accent mb-3 block">Coming Soon</span>
-          <h3 class="font-serif text-navy dark:text-white text-2xl mb-3">Next Project</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400 font-light leading-relaxed">
-            More coming soon — check back or follow on GitHub for updates.
+        <!-- FlashMind -->
+        <div class="project-card relative bg-white dark:bg-gray-900 border border-stone-200 dark:border-gray-800 p-8
+                    hover:border-navy dark:hover:border-accent hover:shadow-[4px_4px_0_#1B3A6B] dark:hover:shadow-[4px_4px_0_#c8a96e]
+                    transition-all duration-200"
+            data-tags="React,JavaScript,Java"
+            onclick="window.open('https://github.com/f-azumah/flashmind', '_blank')">
+          <a href="https://github.com/f-azumah/flashmind" target="_blank"
+            class="project-link absolute top-8 right-8 text-xs font-medium text-navy dark:text-accent tracking-wide opacity-0 transition-opacity">
+            View on GitHub ↗
+          </a>
+          <span class="text-xs font-medium uppercase tracking-widest text-accent mb-3 block">2026</span>
+          <h3 class="font-serif text-navy dark:text-white text-2xl mb-3">FlashMind</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-light leading-relaxed mb-5">
+            A flashcard and quiz app with a stack-based card engine built in Java. Features a Spring Boot REST API backend, React frontend, quiz mode with score tracking, and a progress bar.
           </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag text-xs px-2.5 py-1 bg-stone-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 font-medium rounded-sm">React</span>
+            <span class="tech-tag text-xs px-2.5 py-1 bg-stone-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 font-medium rounded-sm">JavaScript</span>
+            <span class="tech-tag text-xs px-2.5 py-1 bg-stone-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 font-medium rounded-sm">Java</span>
+            <span class="tech-tag text-xs px-2.5 py-1 bg-stone-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 font-medium rounded-sm">Spring Boot</span>
+            <span class="tech-tag text-xs px-2.5 py-1 bg-stone-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 font-medium rounded-sm">REST API</span>
+          </div>
         </div>
 
       </div>
@@ -191,7 +205,7 @@
       </div>
     </div>
   </section>
-
+`
   <!-- ══ FOOTER ══ -->
   <footer class="text-center py-6 border-t border-stone-200 dark:border-gray-800 space-y-1">
     <p id="live-clock" class="text-xs text-gray-400 dark:text-gray-600 font-mono tracking-widest"></p>
