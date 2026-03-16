@@ -1,0 +1,52 @@
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(18px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.anim-1 { animation: fadeUp .6s  .10s both; }
+.anim-2 { animation: fadeUp .6s  .25s both; }
+.anim-3 { animation: fadeUp .6s  .40s both; }
+.anim-4 { animation: fadeUp .6s  .55s both; }
+.anim-5 { animation: fadeUp .6s  .80s both; }
+
+.reveal {
+  opacity:0; transform:translateY(20px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible { opacity:1; transform:none; }
+
+/* ── Typing cursor ── */
+#typed-text::after {
+  content:'|';
+  display:inline-block;
+  margin-left:2px;
+  animation: blink .7s step-end infinite;
+}
+@keyframes blink {
+  0%,100% { opacity:1; }
+  50%      { opacity:0; }
+}
+
+/* ── Project card hover link ── */
+.project-card:hover .project-link { opacity:1; }
+
+/* ── Tag filter active state ── */
+.tag-btn.active {
+  background-color: #1B3A6B;
+  color: #fff;
+  border-color: #1B3A6B;
+}
+.dark .tag-btn.active {
+  background-color: #c8a96e;
+  color: #1a1a1a;
+  border-color: #c8a96e;
+}
+
+/* ── Project card hide/show ── */
+.project-card {
+  transition: opacity .3s ease, transform .3s ease, max-height .4s ease;
+}
+.project-card.hidden-card {
+  opacity:0; pointer-events:none; transform:scale(0.97);
+  position:absolute; visibility:hidden;
+}
