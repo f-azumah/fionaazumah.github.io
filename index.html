@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fiona Azumah — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['DM Serif Display', 'serif'],
+            sans: ['DM Sans', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              DEFAULT: '#1B3A6B',
+              light: '#2a4f8f',
+            },
+            accent: '#c8a96e',
+            ink: '#1a1a1a',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .anim-1 { animation: fadeUp 0.6s 0.1s both; }
+    .anim-2 { animation: fadeUp 0.6s 0.25s both; }
+    .anim-3 { animation: fadeUp 0.6s 0.4s both; }
+    .anim-4 { animation: fadeUp 0.6s 0.55s both; }
+    .anim-5 { animation: fadeUp 0.6s 0.8s both; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .project-card:hover .project-link { opacity: 1; }
+  </style>
+</head>
+<body class="bg-stone-50 text-ink font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-12 py-5 bg-stone-50/90 backdrop-blur-md border-b border-stone-200">
+    <a href="#hero" class="font-serif text-navy text-lg tracking-tight">Fiona Azumah</a>
+    <ul class="flex gap-8 list-none">
+      <li><a href="#about"    class="text-xs font-medium uppercase tracking-widest text-gray-400 hover:text-navy transition-colors">About</a></li>
+      <li><a href="#skills"   class="text-xs font-medium uppercase tracking-widest text-gray-400 hover:text-navy transition-colors">Skills</a></li>
+      <li><a href="#projects" class="text-xs font-medium uppercase tracking-widest text-gray-400 hover:text-navy transition-colors">Projects</a></li>
+      <li><a href="#contact"  class="text-xs font-medium uppercase tracking-widest text-gray-400 hover:text-navy transition-colors">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="relative min-h-screen flex flex-col justify-center max-w-4xl mx-auto px-8 md:px-12 pt-28">
+    <p class="anim-1 text-xs font-medium uppercase tracking-[0.14em] text-accent mb-5">Based in New York</p>
+    <h1 class="anim-2 font-serif text-navy leading-[1.05] mb-6" style="font-size: clamp(3rem, 7vw, 5.5rem);">
+      Fiona<br/>Azumah
+    </h1>
+    <p class="anim-3 text-lg text-gray-400 font-light max-w-md mb-10">
+      Computer Science Graduate &amp; Software Engineer
+    </p>
+    <div class="anim-4 flex flex-wrap gap-3">
+      <a href="#projects" class="inline-block px-6 py-2.5 bg-navy text-white text-sm font-medium tracking-wide hover:bg-navy-light transition-colors rounded-sm">View Projects</a>
+      <a href="https://linkedin.com/in/fionaazumah" target="_blank" class="inline-block px-6 py-2.5 border border-navy text-navy text-sm font-medium tracking-wide hover:bg-navy hover:text-white transition-colors rounded-sm">LinkedIn</a>
+      <a href="https://github.com/f-azumah" target="_blank" class="inline-block px-6 py-2.5 border border-navy text-navy text-sm font-medium tracking-wide hover:bg-navy hover:text-white transition-colors rounded-sm">GitHub</a>
+    </div>
+    <div class="anim-5 absolute bottom-10 left-8 md:left-12 flex items-center gap-3 text-xs uppercase tracking-widest text-gray-400">
+      <span class="w-8 h-px bg-gray-300"></span>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-4xl mx-auto px-8 md:px-12 py-24">
+    <div class="reveal">
+      <p class="text-xs font-medium uppercase tracking-[0.14em] text-accent mb-2">About</p>
+      <h2 class="font-serif text-navy text-4xl mb-4">A little about me</h2>
+      <div class="w-10 h-0.5 bg-accent mb-8"></div>
+      <p class="text-base text-gray-600 font-light leading-relaxed max-w-2xl mb-4">
+        I'm a Computer Science graduate from Syracuse University (December 2025) with a passion for building software that's both functional and intuitive. I love the intersection of clean code and thoughtful user experience.
+      </p>
+      <p class="text-base text-gray-600 font-light leading-relaxed max-w-2xl">
+        I've worked in technical support, software development, and teaching — experiences that taught me how to break down complex problems and communicate solutions clearly. I'm currently seeking software engineering roles where I can contribute to meaningful, mission-driven work.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="max-w-4xl mx-auto px-8 md:px-12 py-24">
+    <div class="reveal">
+      <p class="text-xs font-medium uppercase tracking-[0.14em] text-accent mb-2">Skills</p>
+      <h2 class="font-serif text-navy text-4xl mb-4">What I work with</h2>
+      <div class="w-10 h-0.5 bg-accent mb-8"></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div class="bg-white border border-stone-200 p-6">
+          <h3 class="text-xs font-medium uppercase tracking-widest text-navy mb-3">Languages</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Java · C++ · Python · JavaScript · HTML/CSS · Swift</p>
+        </div>
+        <div class="bg-white border border-stone-200 p-6">
+          <h3 class="text-xs font-medium uppercase tracking-widest text-navy mb-3">Tools &amp; Platforms</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Linux · Git · VS Code · IntelliJ · Xcode · React</p>
+        </div>
+        <div class="bg-white border border-stone-200 p-6">
+          <h3 class="text-xs font-medium uppercase tracking-widest text-navy mb-3">Practices</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Software Design · Unit Testing · Agile · System Analysis · Database Administration</p>
+        </div>
+        <div class="bg-white border border-stone-200 p-6">
+          <h3 class="text-xs font-medium uppercase tracking-widest text-navy mb-3">Coursework</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Data Structures · Algorithms · Systems &amp; Network Programming · Software Specification &amp; Design</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-4xl mx-auto px-8 md:px-12 py-24">
+    <div class="reveal">
+      <p class="text-xs font-medium uppercase tracking-[0.14em] text-accent mb-2">Projects</p>
+      <h2 class="font-serif text-navy text-4xl mb-4">Things I've built</h2>
+      <div class="w-10 h-0.5 bg-accent mb-8"></div>
+      <div class="flex flex-col gap-5">
+
+        <!-- Wellnest -->
+        <div class="project-card relative bg-white border border-stone-200 p-8 hover:border-navy hover:shadow-[4px_4px_0_#1B3A6B] transition-all duration-200">
+          <a href="https://github.com/f-azumah" target="_blank" class="project-link absolute top-8 right-8 text-xs font-medium text-navy tracking-wide opacity-0 transition-opacity">View on GitHub ↗</a>
+          <span class="text-xs font-medium uppercase tracking-widest text-accent mb-3 block">In Progress · Feb 2026–Present</span>
+          <h3 class="font-serif text-navy text-2xl mb-3">Wellnest</h3>
+          <p class="text-sm text-gray-500 font-light leading-relaxed mb-5">
+            A productivity web application that converts unstructured "brain dump" inputs into structured, prioritized task lists. Built with a focus on intuitive UX and dynamic UI rendering to simplify task organization and improve daily workflow.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2.5 py-1 bg-stone-100 text-gray-500 font-medium rounded-sm">React</span>
+            <span class="text-xs px-2.5 py-1 bg-stone-100 text-gray-500 font-medium rounded-sm">JavaScript</span>
+            <span class="text-xs px-2.5 py-1 bg-stone-100 text-gray-500 font-medium rounded-sm">HTML/CSS</span>
+            <span class="text-xs px-2.5 py-1 bg-stone-100 text-gray-500 font-medium rounded-sm">State Management</span>
+          </div>
+        </div>
+
+        <!-- Placeholder -->
+        <div class="project-card relative bg-white border border-dashed border-stone-300 p-8 opacity-50">
+          <span class="text-xs font-medium uppercase tracking-widest text-accent mb-3 block">Coming Soon</span>
+          <h3 class="font-serif text-navy text-2xl mb-3">Next Project</h3>
+          <p class="text-sm text-gray-500 font-light leading-relaxed">
+            More coming soon — check back or follow on GitHub for updates.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-4xl mx-auto px-8 md:px-12 py-24 border-t border-stone-200 text-center">
+    <div class="reveal">
+      <p class="text-xs font-medium uppercase tracking-[0.14em] text-accent mb-2">Contact</p>
+      <h2 class="font-serif text-navy text-4xl mb-4">Let's connect</h2>
+      <div class="w-10 h-0.5 bg-accent mx-auto mb-8"></div>
+      <p class="text-base text-gray-400 font-light max-w-sm mx-auto mb-8">
+        I'm open to software engineering opportunities. Feel free to reach out via email or connect on LinkedIn.
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="mailto:fionaazumah1@gmail.com" class="inline-block px-6 py-2.5 bg-navy text-white text-sm font-medium tracking-wide hover:bg-navy-light transition-colors rounded-sm">fionaazumah1@gmail.com</a>
+        <a href="https://linkedin.com/in/fionaazumah" target="_blank" class="inline-block px-6 py-2.5 border border-navy text-navy text-sm font-medium tracking-wide hover:bg-navy hover:text-white transition-colors rounded-sm">LinkedIn</a>
+        <a href="https://github.com/f-azumah" target="_blank" class="inline-block px-6 py-2.5 border border-navy text-navy text-sm font-medium tracking-wide hover:bg-navy hover:text-white transition-colors rounded-sm">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 text-xs text-stone-300 border-t border-stone-200">
+    © 2026 Fiona Azumah
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
